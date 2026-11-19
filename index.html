@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="ULTIMATE GADGETS — trending electronics and mobile accessories delivered across India.">
+  <title>ULTIMATE GADGETS | Trending Gadgets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">UG</span><span>ULTIMATE <b>GADGETS</b><small>SMART FINDS. BETTER LIFE.</small></span></a>
+  <button class="cart-button" id="openCart" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+</header>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">TRENDING TECH • INDIA-WIDE DELIVERY</p>
+    <h1>Upgrade your<br><em>everyday.</em></h1>
+    <p>Discover useful gadgets, smart accessories and everyday tech essentials.</p>
+    <a class="primary-link" href="#shop">Explore collection <span>→</span></a>
+  </div>
+  <div class="hero-art" aria-label="Gadgets illustration">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    <div class="device watch"><div class="watch-face">10:08</div></div>
+    <div class="device buds"><i></i><i></i></div>
+    <div class="device phone"><div class="phone-screen"><span>UG</span><small>TECH FOR YOU</small></div></div>
+    <div class="spark s1">✦</div><div class="spark s2">✧</div>
+  </div>
+</section>
+<div class="trust-strip"><span>✓ Carefully selected products</span><span>✓ UPI & Cash on Delivery</span><span>✓ Delivery across India</span></div>
+<main id="shop" class="shop">
+  <div class="section-heading"><div><p class="eyebrow">OUR COLLECTION</p><h2>Popular gadgets</h2></div><input id="searchInput" type="search" placeholder="Search gadgets…" aria-label="Search products"></div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-category="All">All</button>
+    <button class="filter" data-category="Audio">Audio</button>
+    <button class="filter" data-category="Wearables">Wearables</button>
+    <button class="filter" data-category="Accessories">Accessories</button>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</main>
+<section class="promise">
+  <div><p class="eyebrow">WHY ULTIMATE GADGETS</p><h2>Tech shopping,<br>made simple.</h2></div>
+  <p>We’re building a dependable destination for useful, affordable gadgets. Product availability, delivery estimates and warranty details are confirmed with you before an order is accepted.</p>
+</section>
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">UG</span><span>ULTIMATE <b>GADGETS</b><small>SMART FINDS. BETTER LIFE.</small></span></a><div class="footer-links"><a href="#shop">Shop</a><a href="policies.html">Policies</a><a href="mailto:hello@example.com">Contact</a></div><p>© <span id="year"></span> Ultimate Gadgets. All rights reserved.</p></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h2>Your cart</h2><button class="icon-button" id="closeCart" aria-label="Close cart">×</button></div>
+  <div id="cartItems" class="cart-items"><p class="empty">Your cart is empty.</p></div>
+  <div class="cart-bottom"><div class="total-line"><span>Subtotal</span><b id="cartTotal">₹0</b></div><button class="checkout-button" id="checkoutButton">Continue to checkout</button><small>Shipping charges and final availability are confirmed before order acceptance.</small></div>
+</aside>
+
+<div class="modal-backdrop" id="checkoutModal">
+  <section class="checkout-modal">
+    <div class="drawer-head"><div><p class="eyebrow">ALMOST THERE</p><h2>Place your order</h2></div><button class="icon-button" id="closeCheckout" aria-label="Close">×</button></div>
+    <div id="checkoutSummary" class="checkout-summary"></div>
+    <form id="orderForm">
+      <label>Full name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+      <label>Mobile number<input name="phone" required inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number"></label>
+      <label>Delivery address<textarea name="address" required rows="3" placeholder="House / street, area, city, state, PIN code"></textarea></label>
+      <label>Payment method<select name="payment" required><option value="UPI">UPI (payment details will be confirmed)</option><option value="Cash on Delivery">Cash on Delivery (subject to confirmation)</option></select></label>
+      <button class="checkout-button" type="submit">Send order on WhatsApp</button>
+      <p class="form-note">This sends an order request to the store. Your order is not confirmed until we reply and confirm stock, delivery charges and payment.</p>
+      <p class="form-error" id="formError"></p>
+    </form>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
